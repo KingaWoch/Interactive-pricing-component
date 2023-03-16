@@ -25,17 +25,86 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    Simple, traffic-based pricing Sign-up for our 30-day trial. No credit card
-    required. Pageviews $ /month Monthly Billing Yearly Billing 25% discount
-    Unlimited websites 100% data ownership Email reports Start my trial
+  <body class="d-flex justify-content-sm-center align-items-center">
+    <div class="container d-grid gap-3">
+      <main class="d-grid gap-5">
+        <header class="text-center py-5">
+          <h1>Simple, traffic-based pricing</h1>
+          <p>Sign-up for our 30-day trial. No credit card required.</p>
+        </header>
+        <section class="rounded-3">
+          <div class="row p-5 top-row m-0">
+            <div class="row d-flex align-items-center">
+              <h2
+                class="text-uppercase col-md-6 col-12 fs-5 text-md-start text-center"
+              >
+                Pageviews
+              </h2>
+              <p
+                class="col-6 d-flex align-items-center gap-2 d-md-block d-none"
+              >
+                <span class="price fs-1">$16.00</span>
+                <span class="per-month">/ month</span>
+              </p>
+            </div>
+            <input type="range" class="col-12" />
+            <p
+              class="col-12 d-flex align-items-center justify-content-center gap-2 py-4 d-md-none"
+            >
+              <span class="price fs-1">$16.00</span>
+              <span class="per-month">/ month</span>
+            </p>
+            <div
+              class="col toggle d-flex justify-content-center align-items-center gap-3 p-3"
+            >
+              <label for="switch">Monthly Billing</label>
+              <input type="checkbox" id="switch" />
+              <label for="switch">Yearly Billing</label>
+              <span class="d-flex discount px-md-1 px-2 rounded-5 gap-1"
+                >25% <span class="d-md-block d-none">discount</span></span
+              >
+            </div>
+          </div>
+          <div class="row p-5 m-0">
+            <div class="col-md-6 col-12 text-md-start text-center">
+              <ul class="list-unstyled d-grid gap-3">
+                <li>
+                  <img src="images/icon-check.svg" class="pe-2" /> Unlimited
+                  websites
+                </li>
+                <li>
+                  <img src="images/icon-check.svg" class="pe-2" /> 100% data
+                  ownership
+                </li>
+                <li>
+                  <img src="images/icon-check.svg" class="pe-2" /> Email reports
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-12 d-grid align-self-center">
+              <button type="submit" class="border-0 p-3 rounded-5">
+                Start my trial
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      <footer class="attribution text-center">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/KingaWoch" target="_blank">Kinga Woch</a>.
+      </footer>
     </div>
   </body>
 </html>

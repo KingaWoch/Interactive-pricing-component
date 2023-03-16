@@ -1,0 +1,99 @@
+:root {
+  --Soft-Cyan: hsl(174, 77%, 80%); /* (Full Slider Bar) */
+  --Strong-Cyan: hsl(174, 86%, 45%); /* (Slider Backround) */
+  --Light-Grayish-Red: hsl(14, 92%, 95%); /* (Discount Background)*/
+  --Light-Red: hsl(15, 100%, 70%); /* (Discount Text) */
+  --Pale-Blue: hsl(226, 100%, 87%); /*  (CTA Text)*/
+  --White: hsl(0, 0%, 100%); /* (Pricing Component Background) */
+  --Ver-Pale-Blue: hsl(230, 100%, 99%); /*  (Main Background)*/
+  --Light-Grayish-Blue: hsl(224, 65%, 95%); /*  (Empty Slider Bar)*/
+  --Light-Grayish-Blue-Toggle: hsl(223, 50%, 87%); /*  (Toggle Background)*/
+  --Grayish-Blue: hsl(225, 20%, 60%); /*  (Text)*/
+  --Dark-Desaturated-Blue: hsl(227, 35%, 25%); /* (Text & CTA Background) */
+
+  --fs: 0.94rem;
+}
+
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--Ver-Pale-Blue);
+  background-image: url(images/bg-pattern.svg);
+  background-repeat: no-repeat;
+}
+
+header {
+  background-image: url(images/pattern-circles.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1,
+.price {
+  font-weight: 800;
+  color: var(--Dark-Desaturated-Blue);
+}
+
+header p {
+  color: var(--Grayish-Blue);
+}
+
+section {
+  background-color: var(--White);
+  -webkit-box-shadow: 2px 10px 34px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 10px 34px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 10px 34px 3px rgba(0, 0, 0, 0.1);
+}
+
+.top-row {
+  border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+
+h2 {
+  color: var(--Grayish-Blue);
+  letter-spacing: 2px;
+}
+
+.per-month {
+  color: var(--Grayish-Blue);
+}
+
+label {
+  color: var(--Grayish-Blue);
+  font-size: var(--fs);
+}
+
+.discount {
+  color: var(--Light-Red);
+  background-color: var(--Light-Grayish-Red);
+  font-size: var(--fs);
+}
+
+ul li {
+  color: var(--Grayish-Blue);
+  font-size: var(--fs);
+}
+
+button {
+  background-color: var(--Dark-Desaturated-Blue);
+  color: var(--Pale-Blue);
+}
+
+.attribution {
+  font-size: 0.8rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 576px) {
+  header p {
+    padding-inline: 4rem;
+  }
+}
