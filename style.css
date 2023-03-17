@@ -70,10 +70,74 @@ label {
   font-size: var(--fs);
 }
 
+.switch {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  display: inline-block;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--Light-Grayish-Blue-Toggle);
+  border-radius: 2rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:hover {
+  background-color: var(--Soft-Cyan);
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 3px;
+  background-color: var(--White);
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--Soft-Cyan);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider::before {
+  /* left: calc(100% - 2px);
+  transform: translateX(-100%); */
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
 .discount {
   color: var(--Light-Red);
   background-color: var(--Light-Grayish-Red);
   font-size: var(--fs);
+  opacity: 0;
+}
+
+.discount.active {
+  opacity: 1;
 }
 
 ul li {
@@ -95,5 +159,9 @@ button {
 @media (max-width: 576px) {
   header p {
     padding-inline: 4rem;
+  }
+
+  label {
+    font-size: 0.8rem;
   }
 }
