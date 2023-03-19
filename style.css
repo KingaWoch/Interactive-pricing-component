@@ -148,16 +148,12 @@ input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 10px;
   cursor: pointer;
-  background: var(--Light-Grayish-Blue);
-  border-radius: 1rem;
 }
 
 input[type="range"]::-moz-range-track {
   width: 100%;
   height: 10px;
   cursor: pointer;
-  background: var(--Light-Grayish-Blue);
-  border-radius: 1rem;
 }
 
 /*  SWITCH  */

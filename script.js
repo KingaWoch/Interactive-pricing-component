@@ -32,6 +32,7 @@ range.addEventListener("click", () => {
       p.innerHTML = "$36.00";
     });
   }
+  fillSlider();
 });
 
 slider.addEventListener("click", () => {
@@ -78,3 +79,14 @@ function addDiscount() {
       ".00";
   });
 }
+
+function fillSlider() {
+  const fullSliderBar = "hsl(174, 77%, 80%)";
+  const emptySliderBar = "hsl(224, 65%, 95%)";
+  const trackIncrement = `${
+    ((range.value - range.min) / (range.max - range.min)) * 100
+  }%`;
+
+  range.style.backgroundImage = `linear-gradient(90deg, ${fullSliderBar} ${trackIncrement}, ${emptySliderBar} ${trackIncrement})`;
+}
+fillSlider();
