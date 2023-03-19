@@ -76,6 +76,18 @@ h2 {
 
 /* RANGE */
 
+.sr-only {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 input[type="range"] {
   appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
@@ -163,20 +175,20 @@ label {
   font-size: var(--fs);
 }
 
-.switch {
+.switch-label {
   position: relative;
   width: 50px;
   height: 26px;
   display: inline-block;
 }
 
-.switch input {
+.switch-label input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.slider {
+.switch {
   position: absolute;
   cursor: pointer;
   background-color: var(--Light-Grayish-Blue-Toggle);
@@ -189,11 +201,11 @@ label {
   transition: 0.4s;
 }
 
-.slider:hover {
+.switch:hover {
   background-color: var(--Soft-Cyan);
 }
 
-.slider::before {
+.switch::before {
   position: absolute;
   content: "";
   height: 20px;
@@ -206,15 +218,15 @@ label {
   transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked + .switch {
   background-color: var(--Soft-Cyan);
 }
 
-input:focus + .slider {
+input:focus + .switch {
   box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked + .slider::before {
+input:checked + .switch::before {
   /* left: calc(100% - 2px);
   transform: translateX(-100%); */
   -webkit-transform: translateX(26px);

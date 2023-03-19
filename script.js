@@ -1,7 +1,7 @@
 const range = document.getElementById("range");
 const numberOfViews = document.getElementById("number-of-views");
 const price = document.querySelectorAll(".price");
-const slider = document.querySelector(".slider");
+const switchBtn = document.querySelector(".switch");
 const discount = document.querySelector(".discount");
 
 range.addEventListener("click", () => {
@@ -35,7 +35,7 @@ range.addEventListener("click", () => {
   fillSlider();
 });
 
-slider.addEventListener("click", () => {
+switchBtn.addEventListener("click", () => {
   const val = document.querySelector("input[type=checkbox]").checked;
   if (val) {
     discount.classList.add("d-none");
